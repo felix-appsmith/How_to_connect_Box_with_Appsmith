@@ -11,6 +11,13 @@ This is a guide on how to make a successful connection from Appsmith to abox.com
       - [Additional configurations in my app](#additional-configurations-in-my-app)
     - [Connect with Developer Token](#connect-with-developer-token)
     - [Oauth2 Configuration](#oauth2-configuration)
+    - [Endpoint configuration](#endpoint-configuration)
+      - [Get Files](#get-files)
+      - [Download Files](#download-files)
+      - [Delete Files](#delete-files)
+        - [Error notes](#error-notes)
+      - [Upload Files](#upload-files)
+        - [Errors notes](#errors-notes)
 
 ## How to connect box
 
