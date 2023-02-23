@@ -1,6 +1,6 @@
 # Appsmith with box
 
-This is a guide on how to make a successful connection from Appsmith to abox.com using a developer token or using authentication via Oauth2.0. It also details all the problems encountered while making this connection and failing points.
+This is a guide on how to make a successful connection from Appsmith to box.com using a developer token or using authentication via Oauth2.0. It also details all the problems encountered while making this connection and failing points.
 
 ## Table of Contents
 
@@ -23,7 +23,7 @@ This is a guide on how to make a successful connection from Appsmith to abox.com
 
 #### Create app
 
-1. Travel to the developer dashboard in box
+1. Navigate to the developer dashboard in Box.
 2. Click on My Apps
 3. Press Create New App
 ![image](https://user-images.githubusercontent.com/114161539/220941067-0efd514a-404c-4d9b-b469-075671c37f9e.png)
