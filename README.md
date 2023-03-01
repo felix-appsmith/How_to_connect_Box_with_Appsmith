@@ -1,6 +1,6 @@
-# Appsmith with box
+# Appsmith with Box
 
-This is a guide on how to make a successful connection from Appsmith to box.com using a developer token or using authentication via Oauth2.0.
+This is a guide on how to make a successful connection from Appsmith to Box.com using a developer token or using authentication via Oauth2.0.
 
 ## Table of Contents
 
@@ -17,30 +17,30 @@ This is a guide on how to make a successful connection from Appsmith to box.com 
       - [Delete Files](#delete-files)
       - [Upload Files](#upload-files)
 
-## How to connect box
+## How to connect with Box
 
-### Application configuration from box
+### Application configuration from Box
 
 #### Create app
 
 1. Navigate to the developer dashboard in Box.
-2. Click on My Apps
-3. Press Create New App
+2. Click on My Apps.
+3. Press Create New App.
 ![image](https://user-images.githubusercontent.com/114161539/220941067-0efd514a-404c-4d9b-b469-075671c37f9e.png)
 
-4. Select Custom App
+4. Select Custom App.
 ![image](https://user-images.githubusercontent.com/114161539/220941345-9ae7aa93-363a-405f-a87e-3fa122c88164.png)
 
-5. Select the option called `User Authentication (OAuth 2.0)`
+5. Select the option called `User Authentication (OAuth 2.0)`.
 ![image](https://user-images.githubusercontent.com/114161539/220942759-961be1d9-c97b-4bb8-b1ea-05fd87af1550.png)
 
-6. Enter the name of your app
+6. Enter the name of your app.
 ![image](https://user-images.githubusercontent.com/114161539/220943003-12b69aaa-7212-48b3-879f-4f77c301bd8e.png)
 
-7. Press create
+7. Press create.
 ![image](https://user-images.githubusercontent.com/114161539/220943130-a0063b7e-f092-472e-8954-7209c6a1cff7.png)
 
-#### Aditionals configurations in me app
+#### Aditional configuration for the app
 1. In OAuth 2.0 Redirect URI add new uri and put appsmith uri
    - `https://app.appsmith.com/api/v1/datasources/authorize`
 ![image](https://user-images.githubusercontent.com/114161539/220943549-ddf58129-ae9e-47cc-865b-a67411204dfe.png)
@@ -51,9 +51,6 @@ This is a guide on how to make a successful connection from Appsmith to box.com 
 
 3. Press the Save changes button
 ![image](https://user-images.githubusercontent.com/114161539/220944801-a691d629-7ac4-4e08-a755-ca990a49e6d0.png)
-
-
-   - Hapy hacking!
 
 ### Connect with Developer Token
 
@@ -67,12 +64,10 @@ curl https://api.box.com/2.0/folders/0 -H "Authorization: Bearer <<Token>>" -H "
 
 ![image](https://user-images.githubusercontent.com/114161539/220946100-a72ecb64-881f-4895-8e3f-395b1c50460b.png)
 
-
-
-1. Go to datasources in appsmith
-2. Select AHutenticate API
+1. Go to datasources in Appsmith
+2. Select Athenticated API
 3. Set the configuration parameters as shown below
-```bash
+```plaintext
 URL: `https://api.box.com/2.0/`
 Headers: `Content-Type`: `application/json`
 Authentication Type: `OAuth 2.0`
@@ -88,23 +83,18 @@ Add you Redirect URL in the`OAuth 2.0 Redirect URI` in your `box.com` console
 4. Press the authorize button
    `note: sometimes you will get a message that says something went wrong, just authorize the data source again`
 ![image](https://user-images.githubusercontent.com/114161539/220940326-305f0244-3971-42ce-85b8-2655cc6003dd.png)
-   
-
-Happy hacking!
 
 ## Endpoint configuration
 
 ### Get Files
 
-Htpp method: `GET`
+Http method: `GET`
 
 URL: `https://api.box.com/2.0/folders/0`
 Headers: `Content-Type: application/json`
 
 1. You can link it to a table to show the files by writing this in the table data:
    `{{Get_Files.data.item_collection.entries}}`
-
-`Happy Hacking`
 
 ### Download Files
 
@@ -115,20 +105,16 @@ Http method: `GET`
 
 URL: `https://api.box.com/2.0/files/{{Table1.selectedRow.id}}`
 Headers: `content-type: application/json`
-`Happy Hacking`
 
 ### Delete Files
 
 1. Use a widget input
 2. Set the default value of the input to this `{{Table1.selectedRow.id}}`
-   `note:You can use the same input configured above`
+   `Note: You can use the same input configured above`
 
 Http method: `DELETE`
 
 URL: `https://api.box.com/2.0/files/{{Table1.selectedRow.id}}`
-
-`Happy Hacking`
-
 
 ### Upload Files
 
