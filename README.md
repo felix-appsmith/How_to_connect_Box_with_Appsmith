@@ -1,6 +1,6 @@
 # Appsmith with box
 
-This is a guide on how to make a successful connection from Appsmith to box.com using a developer token or using authentication via Oauth2.0. It also details all the problems encountered while making this connection and failing points.
+This is a guide on how to make a successful connection from Appsmith to box.com using a developer token or using authentication via Oauth2.0.
 
 ## Table of Contents
 
